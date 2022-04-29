@@ -1,3 +1,16 @@
+//MENU TOGGLE
+var menuBar = this.document.getElementById("bar-icon");
+var menuTimes = this.document.getElementById("times-icon");
+var navbar = this.document.querySelector(".navbar-menu");
+
+menuBar.addEventListener("click", function(){
+    navbar.style.transform = "translateY(0)"
+})
+
+menuTimes.addEventListener("click", function(){
+    navbar.style.transform = "translateY(-100%)"
+})
+
 // SET FOOTER YEAR
 let curYear = document.getElementById('year');
 curYear.innerHTML = new Date().getFullYear();
@@ -19,11 +32,9 @@ articleHeader.forEach(item=>{
     })
 })
 
-// const tastyPrlx = document.querySelector(".tasty-section");
-// const blogPrlx = document.querySelector(".blog-event-section");
+//STICKY HEADER
+window.addEventListener("scroll", function(){
+    var navbar = document.querySelector(".navbar");
+    navbar.parentElement.classList.toggle("sticky", this.window.scrollY > 200);
+})
 
-// window.addEventListener("scroll", function(){
-//     let offset = window.pageYOffset;
-//     tastyPrlx.style.backgroundPositionY = offset * .1 + 'px';
-//     blogPrlx.style.backgroundPositionY = offset * .1 + 'px';
-// })
