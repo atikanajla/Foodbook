@@ -64,8 +64,8 @@ a:hover{
 .header__line{
     width: 100%;
     height: .5em;
-    border-top: solid 1px gray;
-    border-bottom: solid 1px gray;
+    border-top: solid 1px rgba(0, 0, 0, 0.2);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -78,15 +78,15 @@ a:hover{
 /* ------------------- */
 
 header{
-    background-image: url(/img/wss-wallpaper1.jpeg);
+    background-image: url(/img/menu-tumpuk.jpg);
     background-size: cover;
-    background-position: left;
+    background-position: center;
     height: 100vh;
 }
 
 nav{
     position: absolute;
-    width: 98%
+    width: 100%;
 }
 .navbar{
     position: relative;
@@ -97,7 +97,7 @@ nav{
 }
 
 .navbar .navbar-logo{
-    color: var(--primary-color);
+    color: white;
     font-family: var(--font-secondary);
     font-size: 1.5em;
     padding-left: 1em;
@@ -175,6 +175,11 @@ nav{
         display: block;
         font-size: 2rem;
         padding: 1em;
+        color: white;
+    }
+
+    .sticky{
+        display: none;
     }
     
 }
@@ -236,6 +241,13 @@ nav{
     transform-origin: top;
 }
 
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
 @keyframes scroll{
     from{transform: scaleY(0)}
     to{transform: scaleY(1)}
@@ -251,12 +263,16 @@ nav{
     background-size: cover;
 }
 .welcome__content{
-    flex: 0 0 50%;
+    flex: 1;
     margin: 10em 1em;
 }
 
 .welcome__image{
-    flex: 0 0 50%;
+    flex: 1;
+    background-image: url(/img/wss-wallpaper1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .welcome__content h1{
@@ -273,12 +289,16 @@ nav{
 }
 
 @media screen and (max-width: 780px) {
+    .welcome-section{
+        flex-direction: column;
+    }
+
     .welcome__image{
-        display: none;
+        padding-top: 65%;
+        order: 1;
     }
     .welcome__content{
-        flex: 1;
-        padding: 1em;
+        margin: 3em 1em;
         background-color: rgba(255, 255, 255, 0.5);
     }
 }
@@ -344,11 +364,16 @@ nav{
 
 .tasty-menu__card{
     display: flex;
-    /* align-items: center; */
+    padding: 1em .5em;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+    border-radius: .5em;
+    background-image: url(/img/white-wallpaper.jpg);
+    background-size: contain;
 }
 
 .tasty-menu-card__description{
     line-height: 1.4rem;
+    flex: 1;
 }
 
 .tasty-menu-card__description h3{
@@ -356,11 +381,14 @@ nav{
     font-size: 1.2rem;
 }
 
-.tasty-menu-card__price{
+.tasty-menu-card__level{
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media screen and (max-width: 780px) {
@@ -405,6 +433,28 @@ nav{
 
 .menu-list__header{
     margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.menu-list__header::after{
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    display: block;
+    animation: infinite 3s menu-header;
+    transform-origin: left;
+}
+
+@keyframes menu-header{
+    from{transform: scaleX(0)}
+    to{transform: scaleX(100%)}
+}
+
+.menu-list__header img{
+    width: 2em;
 }
 .menu-list__header h3{
     font-size: 1.4rem;
@@ -819,4 +869,3 @@ footer{
         display: block;
     }
 }
-
