@@ -10,8 +10,8 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class=" navbar container">
+        <nav id="navbar">
+            <div class="navbar container">
                 <div class="navbar-logo">
                     <h1 class="site-logo">Waroeng SS</h1>
                 </div>
@@ -35,7 +35,7 @@
                     <li><a href="#">Kontak</a></li>
                     <div class="cart">
                         <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                        <div class="counter">1</div>
+                        <!-- <div class="counter">0</div> -->
                     </div>
                 </ul>
             </div>
@@ -84,35 +84,55 @@
                         <h3>Sambal Bajak</h3>
                         <p>Rasa sambal yang khas ini, pedas dengan level sedang dan sedikit citarasa segar daun jeruk. Cocok bagi penikmat pedas level pemula.</p>
                     </div>
-                    <div class="tasty-menu-card__price">$15.50</div>
+                    <div class="tasty-menu-card__level">
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
                 </div>
                 <div class="tasty-menu__card">
                     <div class="tasty-menu-card__description">
                         <h3>Sambal Bawang</h3>
                         <p>Karakter Rasa Sambal Bawang pedas dan berwarna merah. dan Sambal adalah sambal yang banyak disukai oleh khalayak Umum.</p>
                     </div>
-                    <div class="tasty-menu-card__price">$15.50</div>
+                    <div class="tasty-menu-card__level">
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
                 </div>
                 <div class="tasty-menu__card">
                     <div class="tasty-menu-card__description">
                         <h3>Sambal Bawang Bakar</h3>
                         <p>Rasa Sambal Bawang Bakar ini pedas dan berwarna merah kehitaman.</p>
                     </div>
-                    <div class="tasty-menu-card__price">$15.50</div>
+                    <div class="tasty-menu-card__level">
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
                 </div>
                 <div class="tasty-menu__card">
                     <div class="tasty-menu-card__description">
                         <h3>Sambal Bawang Goreng</h3>
-                        <p>Sambal Bawang Goreng ini memiliki rasa yang pedas.</p>
+                        <p>Sambal Bawang Goreng ini memiliki rasa yang pedas. </p>
                     </div>
-                    <div class="tasty-menu-card__price">$15.50</div>
+                    <div class="tasty-menu-card__level">
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
                 </div>
                 <div class="tasty-menu__card">
                     <div class="tasty-menu-card__description">
                         <h3>Sambal Bawang Ijo</h3>
                         <p>Sambal Bawang Ijo ini memiliki karakter Rasa yang tingkat kepedasaannya tidak terlalu pedas.</p>
                     </div>
-                    <div class="tasty-menu-card__price">$15.50</div>
+                    <div class="tasty-menu-card__level">
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,7 +152,7 @@
         <div class="menu__container">
             <div class="menu__list">
                 <div class="menu-list__header">
-                    <i class="fas fa-drumstick-bite"></i>
+                    <img src="/img/meat-svgrepo-com.svg" alt="" srcset="">
                     <h3>Lauk</h3>
                 </div>
                 <div class="menu-list__container">
@@ -142,7 +162,7 @@
                             <h4><a href="">Ayam Kampung Dada</a></h4>
                             <p>Ayam Kampung memiliki citarasa yang gurih dan khas.</p>
                         </div>
-                        <div class="menu-list-card__price">$5.85</div>
+                        <div class="menu-list-card__price">17k</div>
                     </div>
                     <div class="menu-list__card">
                         <img src="/img/ayam-kampung-paha.png" alt="">
@@ -150,7 +170,7 @@
                             <h4><a href="">Ayam Kampung Paha</a></h4>
                             <p>Ayam Kampung lebih memiliki rasa yang gurih daripada ayam potong.</p>
                         </div>
-                        <div class="menu-list-card__price">$5.85</div>
+                        <div class="menu-list-card__price">16k</div>
                     </div>
                     <div class="menu-list__card">
                         <img src="/img/bebek-dada.png" alt="">
@@ -158,14 +178,14 @@
                             <h4><a href="">Bebek Dada</a></h4>
                             <p>Ayam Dada Potong dagingnya lebih tebal & Lebih lembut.</p>
                         </div>
-                        <div class="menu-list-card__price">$5.85</div>
+                        <div class="menu-list-card__price">16k</div>
                     </div>
                 </div>
             </div>
 
             <div class="menu__list">
                 <div class="menu-list__header">
-                    <!-- <icon> -->
+                    <img src="/img/vegetables-svgrepo-com.svg" alt="" srcset="">
                     <h3>Sayur</h3>
                 </div>
                 <div class="menu-list__container">
@@ -175,7 +195,7 @@
                             <h4><a href="">Ca Jamur</a></h4>
                             <p>Sayur ini berbahan dasar jamur tiram segar yang di masak dengan bawang putih yang memiliki rasa gurih.</p>
                         </div>
-                        <div class="menu-list-card__price">$5.85</div>
+                        <div class="menu-list-card__price">5k</div>
                     </div>
                     <div class="menu-list__card">
                         <img src="/img/tumis jamur.png" alt="">
@@ -183,7 +203,7 @@
                             <h4><a href="">Tumis jamur</a></h4>
                             <p>Sayur ini berbahan dasar jamur tiram segar yang di masak dengan sambal terasi segar dan kecap yang memiliki rasa manis.</p>
                         </div>
-                        <div class="menu-list-card__price">$5.85</div>
+                        <div class="menu-list-card__price">5k</div>
                     </div>
                     <div class="menu-list__card">
                         <img src="/img/gudangan.png" alt="">
@@ -191,14 +211,14 @@
                             <h4><a href="">Gudangan</a></h4>
                             <p>Menu dengan campuran sayuran matang seperti bayam, kenikir, kacang panjang rebus dan di campur dengan bumbu kelapa</p>
                         </div>
-                        <div class="menu-list-card__price">$5.85</div>
+                        <div class="menu-list-card__price">4.5k</div>
                     </div>
                 </div>
             </div>
 
             <div class="menu__list">
                 <div class="menu-list__header">
-                    <!-- <icon> -->
+                    <img src="/img/drink-svgrepo-com.svg" alt="" srcset="">
                     <h3>Minuman</h3>
                 </div>
                 <div class="menu-list__container">
@@ -208,7 +228,7 @@
                             <h4><a href="">Jus Alpukat</a></h4>
                             <p>Minuman jus berbahan dasar buah alpukat & kental manis coklat ini cocok dinikmati seusai bersantap pedas.</p>
                         </div>
-                        <div class="menu-list-card__price">$5.85</div>
+                        <div class="menu-list-card__price">11k</div>
                     </div>
                     <div class="menu-list__card">
                         <img src="/img/jus apel.png" alt="">
@@ -216,7 +236,7 @@
                             <h4><a href="">Jus Apel</a></h4>
                             <p>Buah apel hijau yang punya citarasa khas memiliki rasa khas saat di jus dan layak dicoba.</p>
                         </div>
-                        <div class="menu-list-card__price">$5.85</div>
+                        <div class="menu-list-card__price">7k</div>
                     </div>
                     <div class="menu-list__card">
                         <img src="/img/jus jambu.png" alt="">
@@ -224,7 +244,7 @@
                             <h4><a href="">Jus Jambu</a></h4>
                             <p>Jus jambu salah satu minuman yang digemari masyarakat indonesia dengan berbahan dasar Buah Jambu Merah Biji yang masih segar</p>
                         </div>
-                        <div class="menu-list-card__price">$5.85</div>
+                        <div class="menu-list-card__price">6k</div>
                     </div>
                 </div>
             </div>
@@ -239,7 +259,7 @@
         <div class="blog-event-header">
             <div class="blog-event-header__wrapper">
                 <h2 class="blog-event-header__title">Blog & Event</h2>
-                <p class="blog-event-header__desc">I feel that I never was a greater artist than now</p>
+                <p class="blog-event-header__desc">Info & Berita Huuh-Haah</p>
             </div>
         </div>
 
