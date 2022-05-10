@@ -94,7 +94,6 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: .5em 0;
-    z-index: 100;
 }
 
 .navbar .navbar-logo{
@@ -168,7 +167,7 @@ nav{
         display: block;
         position: absolute;
         left: 0;
-        bottom: 0;
+        bottom: 75%;
         font-size: 2rem;
         transform: translateX(-100%);
     }
@@ -351,6 +350,7 @@ nav{
 @media screen and (max-width: 780px) {
     .tasty-section .inner-container{
         margin: 0 1em;
+        padding: 1em;
     }
 }
 
@@ -461,6 +461,11 @@ nav{
     font-size: 1.4rem;
 }
 
+.menu-list__container{
+    background-image: url(/img/white-wallpaper.jpg);
+    background-size: cover;
+}
+
 /* menu-list__card */
 
 .menu-list__card{
@@ -515,6 +520,10 @@ nav{
 @media screen and (min-width: 780px){
     .menu-header{
         width: 75%;
+    }
+
+    .menu-list__container{
+        background-image: none;
     }
 }
 @media screen and (min-width: 1200px){
@@ -870,3 +879,4 @@ footer{
         display: block;
     }
 }
+
